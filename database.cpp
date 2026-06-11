@@ -1,15 +1,17 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
-    std::string items[] = {"Apples", "Pears", "Oranges"};
+    string items[] = {"Apples", "Pears", "Oranges"};
     int quantities[] = {31, 13, 0};
 
     int inventorySize = sizeof(items) / sizeof(items[0]);
-    std::string item;
-    std::cout << "Enter an item name: ";
-    std::cin >> item;
+    string item;
+    cout << "Enter an item name: ";
+    cin >> item;
     bool found = false;
 
     for (int i = 0; i < inventorySize; i++)
@@ -18,22 +20,22 @@ int main()
         {
             found = true;
 
-            std::cout << "Quantity: " << quantities[i] << std::endl;
+            cout << "Quantity: " << quantities[i] << endl;
 
             if (quantities[i] > 0)
             {
-                std::cout << "Available" << std::endl;
+                cout << "Available" << endl;
             }
             else
             {
-                std::cout << "Out of stock" << std::endl;
+                cout << "Out of stock" << endl;
             }
         }
     }
 
     if (!found)
     {
-        std::cout << "Item not found" << std::endl;
+        cout << "Item not found" << endl;
     }
 
     return 0;
